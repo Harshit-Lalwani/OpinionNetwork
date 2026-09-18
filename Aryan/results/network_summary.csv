@@ -1,0 +1,2 @@
+nodes,edges,density,avg_degree,avg_weighted_degree,avg_clustering,transitivity,avg_path_length,diameter,connected_components,largest_component_size,modularity
+60,136,0.0768361581920904,4.533333333333333,1.7946996998076927,0.09164279785350926,0.12169312169312169,1.0607027523041674,1.933964972239999,1,60,0.4406291052751391

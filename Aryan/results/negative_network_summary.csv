@@ -1,0 +1,2 @@
+nodes,edges,components,largest_component,avg_weight,min_weight,max_weight
+60,12,48,11,-0.3019289021762211,-0.4403903433474599,-0.2572351701865045
