@@ -63,5 +63,5 @@ axes[1].legend(frameon=False, loc="lower right", fontsize=9)
 fig.suptitle("Observed network structure vs random-graph nulls (500 replicates, unweighted topology)",
              fontsize=12, color=INK, y=1.02)
 fig.tight_layout()
-fig.savefig("figures/fig6_null_models.png", dpi=200, bbox_inches="tight", facecolor="white")
+fig.savefig("figures/fig2_null_models.png", dpi=200, bbox_inches="tight", facecolor="white")
 print("written")

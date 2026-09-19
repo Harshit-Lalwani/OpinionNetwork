@@ -71,7 +71,7 @@ coherent constructs, using Cronbach's α on each 15-item block:
 Environment and Ethics/Society behave like genuine attitude scales. Technology and
 especially Education do not — their 15 items do not measure one underlying opinion.
 This is the first hint of a result that the network analysis later confirms
-independently (§4.3), and it is the reason we did not simply collapse each domain into
+independently (§3.5), and it is the reason we did not simply collapse each domain into
 a single score.
 
 ### 1.5 Response-quality screening
@@ -172,9 +172,9 @@ and edge count) and a **configuration-model** null (same node count *and* same d
 sequence — the stricter test, since it asks whether structure survives after the degree
 distribution is accounted for).
 
-![Null model comparison](figures/fig6_null_models.png)
+![Null model comparison](figures/fig2_null_models.png)
 
-**Figure 6.** Standardised deviation of each observed metric from its null distribution.
+**Figure 2.** Standardised deviation of each observed metric from its null distribution.
 Dashed lines mark ±1.96 (the 5% two-sided significance band). Panel A: respondent
 network against the degree-preserving null. Panel B: statement network against both
 nulls.
@@ -203,6 +203,12 @@ Two findings, and they pull in different directions:
    high modularity score on a sparse top-K graph is an artifact of sparsity, not
    evidence of communities.
 
+The sparsity artifact is directly visible in the construction parameter. Rebuilding the
+statement network at K = 2, 3 and 5 gives modularity **0.590 → 0.441 → 0.340**: the
+score falls monotonically as the graph gets denser, tracking the number of edges rather
+than any change in the underlying opinions. A modularity value read without a null
+model is largely a report of how aggressively the graph was sparsified.
+
 This is the single most important methodological caveat in the report and it governs how
 strongly we are willing to phrase everything that follows.
 
@@ -217,9 +223,9 @@ Louvain on the respondent network returns **4 substantial communities** (n = 31,
 11) plus 8 singletons, which are the isolates of §1.3 and are excluded from all
 community-level statistics.
 
-![Respondent network](figures/fig2_respondent_network.png)
+![Respondent network](figures/fig3_respondent_network.png)
 
-**Figure 2.** The respondent similarity network at r ≥ 0.40, coloured by Louvain
+**Figure 3.** The respondent similarity network at r ≥ 0.40, coloured by Louvain
 community. The visual impression — one dense core with communities as adjacent
 neighbourhoods rather than separated blobs — is exactly what the modularity z-score
 predicts.
@@ -236,7 +242,7 @@ pairs, mean cross-community similarity is below both within-community values:
 | B–D | 0.395 | 0.388 | 0.311 | 0.948 | **13** |
 | C–D | 0.259 | 0.388 | 0.252 | 0.954 | 7 |
 
-(A = 31, B = 24, C = 22, D = 11 members, corresponding to communities 0–3 in Figure 2.)
+(A = 31, B = 24, C = 22, D = 11 members, corresponding to communities 0–3 in Figure 3.)
 
 **But are they *different*?** Barely. The cosine similarity between any two communities'
 mean 60-dimensional belief vectors is **0.937–0.954**. Geometrically the four camps point
@@ -301,14 +307,77 @@ Crucially, **all four camps sit on the agreement side of nearly every Ethics/Soc
 Environment statement**. The divisions above are variations within a shared consensus,
 which is precisely why the cosine similarities in §3.2 are so high.
 
-### 3.4 Do opinions organise the way the survey assumes?
+### 3.4 Disagreement is not the same as division
+
+A natural objection to §3.3 is that T12 and T13 might top the ranking simply because
+they are the statements people disagree about most — that η² is just measuring variance.
+It is not, and testing this produces the report's sharpest result.
+
+We regressed each statement's discriminating power (η² from §3.3) on its raw response
+standard deviation across all 60 items. The two are related, but only weakly:
+**Pearson r = 0.306 (p = 0.018), Spearman ρ = 0.318** — variance explains roughly **9%**
+of discriminating power. Which statements divide the class into *camps* is largely
+independent of which statements the class *disagrees about*.
+
+![Variance vs discrimination](figures/fig4_variance_vs_discrimination.png)
+
+**Figure 4.** Each statement's response variance (x) against how much of its variance is
+explained by community membership (y), facetted by domain. All 60 statements appear in
+grey in every panel for reference. A statement high on the x-axis is *contested*; a
+statement high on the y-axis is *factional*. These are clearly different properties.
+
+The domain means make the separation explicit:
+
+| Domain | Mean response sd | Mean η² | Max η² |
+|---|---|---|---|
+| Technology | 0.917 | **0.148** | **0.472** |
+| Education | 0.886 | 0.093 | 0.222 |
+| Ethics/Society | 0.804 | 0.060 | 0.158 |
+| Environment | 0.724 | 0.059 | 0.165 |
+
+**Technology and Education generate almost identical amounts of disagreement (sd 0.917 vs
+0.886) but Technology's disagreement is twice as factional** (mean η² 0.148 vs 0.093).
+Controlling for variance directly: of the statements with sd > 0.9, the 8 Technology
+items average η² = 0.207 while the 9 Education items average η² = 0.103. At matched
+levels of disagreement, Technology divides the class into groups and Education does not.
+
+The cleanest single illustration is E03, "Class attendance should be compulsory":
+
+| Statement | Rank by variance | Rank by η² | η² |
+|---|---|---|---|
+| **E03.** Compulsory attendance | **2 of 60** | **44 of 60** | 0.045 |
+| **T13.** Cybersecurity over new tech | 22 of 60 | **2 of 60** | 0.415 |
+| **T12.** Stricter AI regulation | 10 of 60 | **1 of 60** | 0.472 |
+
+E03 is the second most contested statement in the entire survey and the 44th most
+factional. T13 is the reverse: only middling disagreement, but almost perfectly aligned
+with community structure.
+
+**Interpretation.** These are two genuinely different kinds of disagreement, and
+conflating them is the standard error in survey analysis. Education produces
+**idiosyncratic** disagreement — people differ, but they differ individually, and
+knowing someone's community tells you almost nothing about their view on attendance or
+examinations. Technology produces **structured** disagreement — comparatively modest in
+magnitude, but aligned, so that a single position (on AI regulation) predicts a cluster
+of others. Only the second kind builds communities. A class can argue loudly about
+attendance without that argument organising anybody into a camp, which is exactly what
+the numbers show it does.
+
+This also explains why the camps in §3.3 are defined by Technology items: **the top six
+separating statements are all Technology or Education, with zero from Ethics/Society or
+Environment.** Ethics and Environment are where the class agrees (mean scores +1.28 and
++1.39, the highest of the four domains), and a statement everyone endorses cannot
+separate anybody, however important it is. The consensus domains are substantively the
+class's strongest convictions and simultaneously its least informative signal.
+
+### 3.5 Do opinions organise the way the survey assumes?
 
 Network B tests the survey's own four-domain structure. Mean within- and between-domain
 correlations:
 
-![Domain heatmap](figures/fig3_domain_heatmap.png)
+![Domain heatmap](figures/fig5_domain_heatmap.png)
 
-**Figure 3.** Mean Pearson correlation within and between the four declared domains.
+**Figure 5.** Mean Pearson correlation within and between the four declared domains.
 Diagonal = internal coherence of each domain.
 
 | Domain | Mean within-domain r | Cronbach's α (§1.4) |
@@ -334,6 +403,20 @@ ethical decision-making", "Companies should be held accountable for environmenta
 impacts", "Products should be designed for reuse and repair") into one
 civic-responsibility cluster that the survey's taxonomy splits in two.
 
+A third, independent statistic agrees. Ranking all 60 statements by response variance
+and taking the extremes, the composition is lopsided in opposite directions:
+
+| Group | Technology | Education | Ethics/Society | Environment |
+|---|---|---|---|---|
+| 10 most contested statements | 3 | **5** | 2 | 0 |
+| 10 most consensual statements | 0 | 2 | 3 | **5** |
+
+Not one Environment statement appears among the ten most contested, and not one
+Technology statement among the ten most consensual. Mean agreement scores order the same
+way: Environment **+1.39**, Ethics/Society **+1.28**, Technology +0.99, Education +0.91.
+This uses variance rather than correlation, so it is not a restatement of the heatmap —
+it is a third method reaching the same conclusion about which domains are real.
+
 **Interpretation.** Opinions organise by *stance*, not by *topic*. "Environmental
 responsibility" and "ethical accountability" are one attitude in this class.
 "Technology" and "Education" are not attitudes at all — they are labels over several
@@ -342,15 +425,15 @@ assessment vs. attendance), which is exactly why their internal correlations are
 Given §3.1, we present this as a statement about *correlation structure*, not as
 evidence of distinct statement communities.
 
-### 3.5 Where the class actually disagrees: the tension network
+### 3.6 Where the class actually disagrees: the tension network
 
 Nearly all statement correlations are positive. Extracting the **negative** edges
 (r < −0.25) isolates genuine opposition, and there is strikingly little of it: **12
 negative edges in the entire 60-node network**.
 
-![Tension network](figures/fig4_tension_network.png)
+![Tension network](figures/fig6_tension_network.png)
 
-**Figure 4.** The opinion-tension network: statements joined when their responses are
+**Figure 6.** The opinion-tension network: statements joined when their responses are
 negatively correlated at r < −0.25. Almost all tension routes through a single node.
 
 **Nine of those twelve edges involve one statement: E03, "Class attendance should be
@@ -374,21 +457,61 @@ variance of all 60 items.
 
 **Interpretation.** Compulsory attendance is this class's ideological litmus test.
 Supporting it anti-correlates with essentially the entire progressive-education cluster
-*and* with several Technology and Ethics positions. It is the one place where the class
-splits into genuinely opposed groups rather than differing in degree. Note also that
-polarization here is **localised to a single item**, not a global property of the
-network — an important negative result given how readily "polarization" is claimed of
-survey data.
+*and* with several Technology and Ethics positions — it is the only statement in the
+survey that is genuinely *opposed* to a broad set of others rather than merely
+uncorrelated with them.
 
-### 3.6 Robustness of the network to losing respondents
+But §3.4 adds a crucial qualification that the tension network alone would hide: E03
+ranks **44th of 60** in discriminating between the four communities (η² = 0.045). The
+attendance divide is real, it is the sharpest opposition in the data, and it **cuts
+across the communities rather than between them**. Every camp contains both its
+supporters and its opponents. This is why E03 dominates Figure 6 yet is absent from the
+separating-statement ranking in §3.3 — the two analyses are measuring different things,
+and only together do they give the right answer.
+
+Note also that polarization here is **localised to a single item** — 12 negative edges
+out of 1 770 possible statement pairs — rather than being a global property of the
+network. Given how readily "polarization" is claimed of survey data, this is an
+important negative result.
+
+### 3.7 Agreement vs correlation: does the construction choice matter?
+
+Both networks so far define similarity by *correlation*, which credits two respondents
+who disagree together just as much as two who agree together. As a cross-check we built
+a **bipartite respondent–statement network** using a different notion entirely: an edge
+wherever a respondent agrees with a statement (score ≥ 1), then projected onto each side.
+
+The bipartite graph has **density 0.723** — the average respondent actively agrees with
+43 of 60 statements. This quantifies the acquiescence already visible in §2.2's
+positive-shifted correlation distribution and is the single clearest statement of the
+report's overall finding: this is an agreeable class, and the analysis is looking for
+structure inside a large shared consensus rather than between opposed blocs.
+
+Two results from the projections:
+
+- **Construction choice changes the camps.** Louvain on the co-agreement projection
+  versus Louvain on the correlation network agree at only **ARI = 0.151**. Two defensible
+  definitions of "similar respondents" produce nearly unrelated partitions. This is
+  independent corroboration of §3.9's finding that community *membership* is not a
+  robust object, and it arises from the network definition rather than the algorithm.
+- **Bridge statements.** In the statement co-endorsement projection, betweenness and the
+  Guimerà–Amaral participation coefficient both single out **T08, "AI-assisted diagnosis
+  should become routine in healthcare"** (betweenness 0.357 — twice the next statement;
+  participation 0.356) and **E13, "Universities should invest more in research than
+  infrastructure"** (0.177, 0.347). Both are also among the least-endorsed items (34 and
+  32 of 96). These are the statements whose supporters are drawn from otherwise separate
+  opinion clusters — concrete, low-variance issues that cut across the class's broader
+  alignments instead of following them.
+
+### 3.8 Robustness of the network to losing respondents
 
 We removed nodes one at a time under two regimes — **targeted** (always the current
 highest-degree node) and **random** (averaged over 30 orders) — and tracked the giant
 component.
 
-![Percolation](figures/fig5_percolation.png)
+![Percolation](figures/fig7_percolation.png)
 
-**Figure 5.** Giant-component size under targeted attack vs random failure.
+**Figure 7.** Giant-component size under targeted attack vs random failure.
 
 Halving the giant component takes **35 targeted removals vs 41 random** — a 15%
 difference. For comparison, a hub-dominated (scale-free) network typically collapses
@@ -402,7 +525,7 @@ cohesion is a distributed property, not something held together by a handful of
 "consensus" individuals — consistent with the very high transitivity (§3.1) and with the
 high-degree respondents differing from the median only in degree, not in kind.
 
-### 3.7 Robustness of the communities themselves
+### 3.9 Robustness of the communities themselves
 
 Because §3.1 showed modularity is only marginally above chance, we stress-tested the
 partition directly. Adjusted Rand Index (ARI) measures partition agreement; 1.0 is
@@ -417,6 +540,7 @@ identical, 0 is chance.
 | Item weighting: uniform vs sd-weighted | 0.535 | Sensitive |
 | Item weighting: uniform vs bimodality-weighted | 0.599 | Sensitive |
 | **Louvain vs label propagation** | **0.105** | **Unstable** |
+| **Correlation vs co-agreement construction (§3.7)** | **0.151** | **Unstable** |
 
 We also tested a **discrimination-weighted** alternative construction, in the spirit of
 item-response theory: statements that split the sample should count more toward
@@ -427,12 +551,13 @@ correlate at Spearman ρ = 0.985–0.990 across all three schemes, and T12/T13 r
 top two separating statements under every weighting. It reshuffles 29 of 96 community
 labels without changing any substantive conclusion.
 
-**Honest verdict.** The *membership* of the four communities is not reproducible under
-algorithm choice — label propagation and Louvain agree barely above chance. What *is*
-reproducible is the **axis** of division: T12 and T13 top the separating-statement
-ranking under every weighting scheme, every threshold, and both algorithms. We therefore
-report the **dividing dimension** as the finding and the **specific membership** as
-provisional.
+**Honest verdict.** The *membership* of the four communities is not reproducible — under
+algorithm choice (ARI 0.105) or under network definition (ARI 0.151) it degrades to
+barely above chance. What *is* reproducible is the **axis** of division: T12 and T13 top
+the separating-statement ranking under every weighting scheme, every threshold, and both
+algorithms. We therefore report the **dividing dimension** as the finding and the
+**specific membership** as provisional. Readers should take "community A believes X" in
+§3.3 as a description of a region of opinion space, not a roster.
 
 ---
 
@@ -452,24 +577,38 @@ to endorse either (0.19 and 0.20, against 1.18–1.68 elsewhere) while remaining
 optimistic about AI's societal impact. That trade-off — enthusiasm paired with
 scepticism about regulation — is the primary structure in this dataset.
 
-**3. Opinion similarity is strongly triadic.** Transitivity exceeds the degree-preserving
+**3. Loud disagreement and group division are different phenomena, and this class has
+both, in different places.** A statement's response variance predicts its power to
+separate communities only weakly (r = 0.306, ~9% of variance). Technology and Education
+provoke near-identical amounts of disagreement (sd 0.917 vs 0.886), but Technology's is
+twice as factional (mean η² 0.148 vs 0.093; 0.207 vs 0.103 among matched high-variance
+items). The extreme case is E03, compulsory attendance: **2nd of 60 by contestedness,
+44th of 60 by factionality**. The class argues hardest about attendance and that argument
+organises nobody — it runs *through* every community rather than between them. Education
+generates idiosyncratic disagreement; Technology generates structured disagreement. Only
+the latter builds camps.
+
+**4. Opinion similarity is strongly triadic.** Transitivity exceeds the degree-preserving
 null by z = +25.0. Opinion agreement in this class propagates through triangles far more
 than random structure with the same degree distribution would produce — the signature of
 a genuine shared latent dimension rather than idiosyncratic pairwise agreement.
 
-**4. The survey's four topic labels do not match how opinions actually group.** Ethics
+**5. The survey's four topic labels do not match how opinions actually group.** Ethics
 and Environment form one coherent civic-responsibility attitude (cross-domain r = 0.243,
 Cronbach's α 0.824/0.868), while Technology (α = 0.649) and Education (α = 0.579) are
 labels spanning unrelated sub-debates. Detected statement communities score ARI = 0.059
-against the declared labels. Two independent methods agree on this ordering.
+against the declared labels. Three independent methods — mean within-domain correlation, Cronbach's α, and response
+variance — agree on this ordering.
 
-**5. Polarization exists but is localised to one statement.** Only 12 of 1 770 possible
+**6. Polarization exists, is localised to one statement, and cuts across the communities.** Only 12 of 1 770 possible
 statement pairs correlate below −0.25, and 9 of those involve E03 (compulsory
 attendance), which just 11 of 96 respondents endorse. Its strongest opposition is to E10
 (innovation over rote learning) at r = −0.440. Disagreement in this class is
-concentrated in a single institutional question, not spread across ideology.
+concentrated in a single institutional question rather than spread across ideology — and
+because E03 ranks only 44th of 60 for community discrimination, that opposition divides
+each camp internally instead of separating one camp from another.
 
-**6. Cohesion is distributed, not hub-dependent.** Targeted removal of the most connected
+**7. Cohesion is distributed, not hub-dependent.** Targeted removal of the most connected
 respondents fragments the network only 15% faster than random removal (35 vs 41 nodes to
 halve the giant component). No individual or small group holds the consensus together.
 
@@ -480,9 +619,10 @@ halve the giant component). No individual or small group holds the consensus tog
   or any external covariate. We cannot tell whether community A is a discipline, a
   cohort, or a genuine attitude group. This is the most important missing validation and
   the natural next step if the survey is re-run.
-- **Community membership is not reproducible across algorithms** (Louvain vs label
-  propagation ARI = 0.105). Conclusions are stated about the dividing axis, not about
-  which individuals belong where.
+- **Community membership is not reproducible** across algorithms (Louvain vs label
+  propagation ARI = 0.105) or across network definitions (correlation vs co-agreement ARI
+  = 0.151). Conclusions are stated about the dividing axis, not about which individuals
+  belong where.
 - **n = 96, of whom 5 answered nothing**, leaves 91 usable respondents and limits the
   power of the community-level ANOVAs, especially for community D (n = 11).
 - **Correlation is not the only reasonable similarity.** We tested three
@@ -502,8 +642,8 @@ halve the giant component). No individual or small group holds the consensus tog
 ├── EDA.ipynb                          # encoding, missingness, α, consensus/controversy
 ├── Response_Quality_Check.ipynb       # straight-lining screen (§1.5)
 ├── Respondent_Similarity_Network.ipynb# Network A: build, communities, percolation
-├── Weighted_Similarity_Network.ipynb  # discrimination-weighted variants, ANOVA (§3.3, §3.7)
-├── Bipartite_Statement_Network.ipynb  # bipartite projection cross-check
+├── Weighted_Similarity_Network.ipynb  # discrimination-weighted variants, ANOVA (§3.3, §3.9)
+├── Bipartite_Statement_Network.ipynb  # bipartite projection, bridges (§3.7)
 ├── Aryan/                             # Network B pipeline (modular package)
 │   ├── run_pipeline.py
 │   ├── src/                           # preprocessing, correlation, communities, nulls
@@ -514,8 +654,12 @@ halve the giant component). No individual or small group holds the consensus tog
     ├── figures/                       # the six figures used here
     ├── recompute_nulls.py             # corrected statement-network nulls (§3.1)
     ├── respondent_nulls.py            # respondent-network nulls (§3.1)
+    ├── variance_discrimination.py     # variance vs eta-squared analysis (§3.4)
+    ├── make_null_figure.py            # Figure 2
+    ├── make_variance_figure.py        # Figure 4
     ├── null_model_corrected.csv
-    └── respondent_null_model.csv
+    ├── respondent_null_model.csv
+    └── variance_vs_discrimination.csv
 ```
 
 ---
@@ -534,7 +678,7 @@ All null-model numbers in §3.1 were recomputed with identical treatment on both
 (respondent network), 500 replicates each. Under the corrected comparison, the
 statement network's modularity is **not** significant (p = 0.84 against the
 degree-preserving null), whereas clustering and transitivity remain strongly significant.
-`Aryan/figures/null_model_comparison.png` should not be used; Figure 6 replaces it.
+`Aryan/figures/null_model_comparison.png` should not be used; Figure 2 replaces it.
 
 ---
 
