@@ -1,0 +1,181 @@
+method,community,size,domain,statement
+louvain,0,16,Education,E08. Maintaining academic honesty is more important than obtaining high grades.
+louvain,0,16,Ethics/Society,S01. Every individual has a responsibility to contribute positively to society.
+louvain,0,16,Ethics/Society,S02. Universities should encourage students to participate in community service activities.
+louvain,0,16,Ethics/Society,S03. New technologies should be evaluated for their societal impact before widespread deployment.
+louvain,0,16,Ethics/Society,S05. Individuals should have greater control over how their personal data are collected and used.
+louvain,0,16,Ethics/Society,S13. Critical evaluation of online information should be taught as a core educational skill.
+louvain,0,16,Ethics/Society,S15. Building public trust is essential for responsible adoption of emerging technologies.
+louvain,0,16,Technology,T10. Protection of personal data is more important than technological convenience.
+louvain,0,16,Technology,T12. Governments should introduce stricter regulations for Artificial Intelligence.
+louvain,0,16,Technology,T13. Cybersecurity deserves greater investment than the development of new digital technologies.
+louvain,0,16,Technology,T14. Social media algorithms contribute to opinion polarization.
+louvain,0,16,Environment,V02. Governments should prioritize investment in renewable energy over fossil fuels.
+louvain,0,16,Environment,V03. Individuals should actively reduce their personal energy consumption.
+louvain,0,16,Environment,V04. Public transportation and non-motorized transport should be promoted even if they require additional public investment.
+louvain,0,16,Environment,V10. Consumers should consider environmental impact when purchasing products.
+louvain,0,16,Environment,V12. Environmental sustainability should be integrated into higher education curricula.
+louvain,1,14,Education,E04. High-quality online learning can effectively complement classroom teaching.
+louvain,1,14,Education,E11. University curricula should be updated more frequently to match emerging technologies.
+louvain,1,14,Ethics/Society,"S06. Combating online misinformation requires shared responsibility among users, platforms, and governments."
+louvain,1,14,Ethics/Society,S10. Scientific evidence should play an important role in public policy decisions.
+louvain,1,14,Ethics/Society,S12. Young people should actively participate in addressing societal challenges.
+louvain,1,14,Technology,T03. Students should disclose the use of AI in assignments and reports.
+louvain,1,14,Technology,T08. AI-assisted diagnosis should become routine in healthcare.
+louvain,1,14,Technology,T09. Autonomous vehicles will ultimately make transportation safer.
+louvain,1,14,Technology,T11. Technology companies should explain how recommendation algorithms work.
+louvain,1,14,Environment,V05. Single-use plastics should be significantly restricted.
+louvain,1,14,Environment,V07. Protecting biodiversity is essential for long-term human well-being.
+louvain,1,14,Environment,V08. Universities should adopt environmentally sustainable campus practices even if implementation costs increase.
+louvain,1,14,Environment,V11. Technological innovation is essential for addressing environmental challenges.
+louvain,1,14,Environment,V15. Current generations have a responsibility to protect natural resources for future generations.
+louvain,2,9,Education,E02. Traditional written examinations accurately measure a student's knowledge.
+louvain,2,9,Education,E03. Class attendance should be compulsory for all courses.
+louvain,2,9,Ethics/Society,S11. People should be free to express differing opinions as long as they do not promote harm or discrimination.
+louvain,2,9,Technology,T01. Artificial Intelligence will improve society more than it will create problems.
+louvain,2,9,Technology,T05. Artificial Intelligence will significantly accelerate scientific discovery.
+louvain,2,9,Technology,T07. Robots should replace humans in hazardous occupations whenever possible.
+louvain,2,9,Technology,T15. Society will increasingly depend on AI-assisted decision making.
+louvain,2,9,Environment,V01. Climate change requires immediate global action.
+louvain,2,9,Environment,"V06. Water conservation should be a priority in households, institutions, and industries."
+louvain,3,8,Education,"E07. Publishing research before graduation should be encouraged, but not mandatory."
+louvain,3,8,Education,E10. Universities should prioritize innovation and problem-solving over rote learning.
+louvain,3,8,Education,E12. Artificial intelligence should be integrated into teaching and personalized learning.
+louvain,3,8,Education,E14. Strong collaborations between universities and industry improve student education.
+louvain,3,8,Education,E15. Continuous learning and skill development are essential throughout one's career.
+louvain,3,8,Technology,T02. Generative AI tools should be allowed as learning aids in higher education.
+louvain,3,8,Technology,T04. Every engineering student should receive formal education in AI.
+louvain,3,8,Technology,T06. Most repetitive jobs will eventually be replaced by intelligent automation.
+louvain,4,7,Ethics/Society,S04. Technology companies should be accountable for unethical use of their platforms.
+louvain,4,7,Ethics/Society,S07. Equal opportunities should be prioritized regardless of a person's background.
+louvain,4,7,Ethics/Society,S09. Universities should promote an inclusive environment where different viewpoints can be discussed respectfully.
+louvain,4,7,Ethics/Society,S14. Leaders should prioritize ethical decision-making even when it reduces short-term gains.
+louvain,4,7,Environment,"V09. Products should be designed to encourage reuse, repair, and recycling."
+louvain,4,7,Environment,V13. Companies should be held accountable for the environmental impacts of their activities.
+louvain,4,7,Environment,V14. International cooperation is necessary to effectively address environmental challenges.
+louvain,5,6,Education,E01. Project-based learning develops deeper understanding than examination-oriented learning.
+louvain,5,6,Education,E05. Students should be encouraged to take courses outside their primary discipline.
+louvain,5,6,Education,E06. Every undergraduate student should participate in at least one research project.
+louvain,5,6,Education,E09. Collaborative learning is generally more effective than individual learning.
+louvain,5,6,Education,E13. Universities should invest more resources in research than in expanding infrastructure.
+louvain,5,6,Ethics/Society,S08. Diverse teams generally make better decisions than homogeneous teams.
+greedy_modularity,0,14,Education,E02. Traditional written examinations accurately measure a student's knowledge.
+greedy_modularity,0,14,Education,E03. Class attendance should be compulsory for all courses.
+greedy_modularity,0,14,Education,E08. Maintaining academic honesty is more important than obtaining high grades.
+greedy_modularity,0,14,Ethics/Society,S11. People should be free to express differing opinions as long as they do not promote harm or discrimination.
+greedy_modularity,0,14,Technology,T01. Artificial Intelligence will improve society more than it will create problems.
+greedy_modularity,0,14,Technology,T05. Artificial Intelligence will significantly accelerate scientific discovery.
+greedy_modularity,0,14,Technology,T07. Robots should replace humans in hazardous occupations whenever possible.
+greedy_modularity,0,14,Technology,T14. Social media algorithms contribute to opinion polarization.
+greedy_modularity,0,14,Technology,T15. Society will increasingly depend on AI-assisted decision making.
+greedy_modularity,0,14,Environment,V01. Climate change requires immediate global action.
+greedy_modularity,0,14,Environment,V02. Governments should prioritize investment in renewable energy over fossil fuels.
+greedy_modularity,0,14,Environment,V03. Individuals should actively reduce their personal energy consumption.
+greedy_modularity,0,14,Environment,V04. Public transportation and non-motorized transport should be promoted even if they require additional public investment.
+greedy_modularity,0,14,Environment,"V06. Water conservation should be a priority in households, institutions, and industries."
+greedy_modularity,1,14,Education,E04. High-quality online learning can effectively complement classroom teaching.
+greedy_modularity,1,14,Education,E11. University curricula should be updated more frequently to match emerging technologies.
+greedy_modularity,1,14,Ethics/Society,"S06. Combating online misinformation requires shared responsibility among users, platforms, and governments."
+greedy_modularity,1,14,Ethics/Society,S10. Scientific evidence should play an important role in public policy decisions.
+greedy_modularity,1,14,Ethics/Society,S12. Young people should actively participate in addressing societal challenges.
+greedy_modularity,1,14,Technology,T03. Students should disclose the use of AI in assignments and reports.
+greedy_modularity,1,14,Technology,T08. AI-assisted diagnosis should become routine in healthcare.
+greedy_modularity,1,14,Technology,T09. Autonomous vehicles will ultimately make transportation safer.
+greedy_modularity,1,14,Technology,T11. Technology companies should explain how recommendation algorithms work.
+greedy_modularity,1,14,Environment,V05. Single-use plastics should be significantly restricted.
+greedy_modularity,1,14,Environment,V07. Protecting biodiversity is essential for long-term human well-being.
+greedy_modularity,1,14,Environment,V08. Universities should adopt environmentally sustainable campus practices even if implementation costs increase.
+greedy_modularity,1,14,Environment,V11. Technological innovation is essential for addressing environmental challenges.
+greedy_modularity,1,14,Environment,V15. Current generations have a responsibility to protect natural resources for future generations.
+greedy_modularity,2,12,Education,E01. Project-based learning develops deeper understanding than examination-oriented learning.
+greedy_modularity,2,12,Education,E05. Students should be encouraged to take courses outside their primary discipline.
+greedy_modularity,2,12,Education,E06. Every undergraduate student should participate in at least one research project.
+greedy_modularity,2,12,Education,E09. Collaborative learning is generally more effective than individual learning.
+greedy_modularity,2,12,Education,E13. Universities should invest more resources in research than in expanding infrastructure.
+greedy_modularity,2,12,Ethics/Society,S01. Every individual has a responsibility to contribute positively to society.
+greedy_modularity,2,12,Ethics/Society,S02. Universities should encourage students to participate in community service activities.
+greedy_modularity,2,12,Ethics/Society,S03. New technologies should be evaluated for their societal impact before widespread deployment.
+greedy_modularity,2,12,Ethics/Society,S08. Diverse teams generally make better decisions than homogeneous teams.
+greedy_modularity,2,12,Ethics/Society,S15. Building public trust is essential for responsible adoption of emerging technologies.
+greedy_modularity,2,12,Environment,V10. Consumers should consider environmental impact when purchasing products.
+greedy_modularity,2,12,Environment,V12. Environmental sustainability should be integrated into higher education curricula.
+greedy_modularity,3,8,Education,"E07. Publishing research before graduation should be encouraged, but not mandatory."
+greedy_modularity,3,8,Education,E10. Universities should prioritize innovation and problem-solving over rote learning.
+greedy_modularity,3,8,Education,E12. Artificial intelligence should be integrated into teaching and personalized learning.
+greedy_modularity,3,8,Education,E14. Strong collaborations between universities and industry improve student education.
+greedy_modularity,3,8,Education,E15. Continuous learning and skill development are essential throughout one's career.
+greedy_modularity,3,8,Technology,T02. Generative AI tools should be allowed as learning aids in higher education.
+greedy_modularity,3,8,Technology,T04. Every engineering student should receive formal education in AI.
+greedy_modularity,3,8,Technology,T06. Most repetitive jobs will eventually be replaced by intelligent automation.
+greedy_modularity,4,7,Ethics/Society,S04. Technology companies should be accountable for unethical use of their platforms.
+greedy_modularity,4,7,Ethics/Society,S07. Equal opportunities should be prioritized regardless of a person's background.
+greedy_modularity,4,7,Ethics/Society,S09. Universities should promote an inclusive environment where different viewpoints can be discussed respectfully.
+greedy_modularity,4,7,Ethics/Society,S14. Leaders should prioritize ethical decision-making even when it reduces short-term gains.
+greedy_modularity,4,7,Environment,"V09. Products should be designed to encourage reuse, repair, and recycling."
+greedy_modularity,4,7,Environment,V13. Companies should be held accountable for the environmental impacts of their activities.
+greedy_modularity,4,7,Environment,V14. International cooperation is necessary to effectively address environmental challenges.
+greedy_modularity,5,5,Ethics/Society,S05. Individuals should have greater control over how their personal data are collected and used.
+greedy_modularity,5,5,Ethics/Society,S13. Critical evaluation of online information should be taught as a core educational skill.
+greedy_modularity,5,5,Technology,T10. Protection of personal data is more important than technological convenience.
+greedy_modularity,5,5,Technology,T12. Governments should introduce stricter regulations for Artificial Intelligence.
+greedy_modularity,5,5,Technology,T13. Cybersecurity deserves greater investment than the development of new digital technologies.
+label_propagation,0,20,Education,E04. High-quality online learning can effectively complement classroom teaching.
+label_propagation,0,20,Education,E05. Students should be encouraged to take courses outside their primary discipline.
+label_propagation,0,20,Education,E06. Every undergraduate student should participate in at least one research project.
+label_propagation,0,20,Ethics/Society,"S06. Combating online misinformation requires shared responsibility among users, platforms, and governments."
+label_propagation,0,20,Ethics/Society,S10. Scientific evidence should play an important role in public policy decisions.
+label_propagation,0,20,Ethics/Society,S11. People should be free to express differing opinions as long as they do not promote harm or discrimination.
+label_propagation,0,20,Ethics/Society,S12. Young people should actively participate in addressing societal challenges.
+label_propagation,0,20,Technology,T05. Artificial Intelligence will significantly accelerate scientific discovery.
+label_propagation,0,20,Technology,T07. Robots should replace humans in hazardous occupations whenever possible.
+label_propagation,0,20,Technology,T08. AI-assisted diagnosis should become routine in healthcare.
+label_propagation,0,20,Technology,T09. Autonomous vehicles will ultimately make transportation safer.
+label_propagation,0,20,Technology,T11. Technology companies should explain how recommendation algorithms work.
+label_propagation,0,20,Technology,T15. Society will increasingly depend on AI-assisted decision making.
+label_propagation,0,20,Environment,V01. Climate change requires immediate global action.
+label_propagation,0,20,Environment,V05. Single-use plastics should be significantly restricted.
+label_propagation,0,20,Environment,"V06. Water conservation should be a priority in households, institutions, and industries."
+label_propagation,0,20,Environment,V07. Protecting biodiversity is essential for long-term human well-being.
+label_propagation,0,20,Environment,V08. Universities should adopt environmentally sustainable campus practices even if implementation costs increase.
+label_propagation,0,20,Environment,V11. Technological innovation is essential for addressing environmental challenges.
+label_propagation,0,20,Environment,V15. Current generations have a responsibility to protect natural resources for future generations.
+label_propagation,1,15,Education,E08. Maintaining academic honesty is more important than obtaining high grades.
+label_propagation,1,15,Education,E11. University curricula should be updated more frequently to match emerging technologies.
+label_propagation,1,15,Education,E15. Continuous learning and skill development are essential throughout one's career.
+label_propagation,1,15,Ethics/Society,S01. Every individual has a responsibility to contribute positively to society.
+label_propagation,1,15,Ethics/Society,S03. New technologies should be evaluated for their societal impact before widespread deployment.
+label_propagation,1,15,Ethics/Society,S04. Technology companies should be accountable for unethical use of their platforms.
+label_propagation,1,15,Ethics/Society,S07. Equal opportunities should be prioritized regardless of a person's background.
+label_propagation,1,15,Ethics/Society,S09. Universities should promote an inclusive environment where different viewpoints can be discussed respectfully.
+label_propagation,1,15,Ethics/Society,S13. Critical evaluation of online information should be taught as a core educational skill.
+label_propagation,1,15,Ethics/Society,S14. Leaders should prioritize ethical decision-making even when it reduces short-term gains.
+label_propagation,1,15,Technology,T03. Students should disclose the use of AI in assignments and reports.
+label_propagation,1,15,Environment,V03. Individuals should actively reduce their personal energy consumption.
+label_propagation,1,15,Environment,"V09. Products should be designed to encourage reuse, repair, and recycling."
+label_propagation,1,15,Environment,V13. Companies should be held accountable for the environmental impacts of their activities.
+label_propagation,1,15,Environment,V14. International cooperation is necessary to effectively address environmental challenges.
+label_propagation,2,7,Education,"E07. Publishing research before graduation should be encouraged, but not mandatory."
+label_propagation,2,7,Education,E10. Universities should prioritize innovation and problem-solving over rote learning.
+label_propagation,2,7,Education,E12. Artificial intelligence should be integrated into teaching and personalized learning.
+label_propagation,2,7,Education,E14. Strong collaborations between universities and industry improve student education.
+label_propagation,2,7,Technology,T02. Generative AI tools should be allowed as learning aids in higher education.
+label_propagation,2,7,Technology,T04. Every engineering student should receive formal education in AI.
+label_propagation,2,7,Technology,T06. Most repetitive jobs will eventually be replaced by intelligent automation.
+label_propagation,3,4,Ethics/Society,S05. Individuals should have greater control over how their personal data are collected and used.
+label_propagation,3,4,Technology,T10. Protection of personal data is more important than technological convenience.
+label_propagation,3,4,Technology,T12. Governments should introduce stricter regulations for Artificial Intelligence.
+label_propagation,3,4,Technology,T13. Cybersecurity deserves greater investment than the development of new digital technologies.
+label_propagation,4,4,Education,E01. Project-based learning develops deeper understanding than examination-oriented learning.
+label_propagation,4,4,Education,E09. Collaborative learning is generally more effective than individual learning.
+label_propagation,4,4,Education,E13. Universities should invest more resources in research than in expanding infrastructure.
+label_propagation,4,4,Ethics/Society,S08. Diverse teams generally make better decisions than homogeneous teams.
+label_propagation,5,4,Ethics/Society,S02. Universities should encourage students to participate in community service activities.
+label_propagation,5,4,Ethics/Society,S15. Building public trust is essential for responsible adoption of emerging technologies.
+label_propagation,5,4,Environment,V10. Consumers should consider environmental impact when purchasing products.
+label_propagation,5,4,Environment,V12. Environmental sustainability should be integrated into higher education curricula.
+label_propagation,6,3,Education,E02. Traditional written examinations accurately measure a student's knowledge.
+label_propagation,6,3,Education,E03. Class attendance should be compulsory for all courses.
+label_propagation,6,3,Technology,T01. Artificial Intelligence will improve society more than it will create problems.
+label_propagation,7,3,Technology,T14. Social media algorithms contribute to opinion polarization.
+label_propagation,7,3,Environment,V02. Governments should prioritize investment in renewable energy over fossil fuels.
+label_propagation,7,3,Environment,V04. Public transportation and non-motorized transport should be promoted even if they require additional public investment.

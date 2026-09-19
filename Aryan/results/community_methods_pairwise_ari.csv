@@ -1,0 +1,4 @@
+method_a,method_b,ari
+louvain,greedy_modularity,0.6745840652293815
+louvain,label_propagation,0.37349461622678815
+greedy_modularity,label_propagation,0.3478957316617366
